@@ -30,8 +30,10 @@ import alro from "./company/alro.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import me from "./me.jpg";
 
 export {
+    me,
     logo,
     logo2,
     kwest,
