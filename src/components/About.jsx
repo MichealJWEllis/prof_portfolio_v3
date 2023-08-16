@@ -52,7 +52,7 @@ const About = () => {
             <div className="flex flex-wrap md:flex-nowrap justify-between items-center">
                 <motion.p
                     variants={fadeIn("", "", 0.1, 1)}
-                    className="mt-2 text-secondary text-[21px] max-w-3xl leading-[30px]"
+                    className="mt-2 text-[grey] text-[21px] max-w-3xl leading-[30px]"
                 >
                     Accomplished Full Stack Developer and IT Analyst with over
                     10 years of experience in designing, developing, and

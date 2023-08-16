@@ -1,16 +1,23 @@
 /* eslint-disable react/no-unknown-property */
-import { Suspense, useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import PropTypes from "prop-types";
-
+import { useFrame } from "@react-three/fiber";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
     const computer = useGLTF("./desktop_pc/scene.gltf");
+    const meshRef = React.useRef();
 
+    useFrame(() => {
+        // Update the rotation for each frame
+        if (meshRef.current) {
+            meshRef.current.rotation.y += 0.004; // Adjust the value to control the speed
+        }
+    });
     return (
-        <mesh>
+        <mesh ref={meshRef}>
             <hemisphereLight intensity={1} groundColor="black" />
             <spotLight
                 position={[-20, 50, 10]}
@@ -57,7 +64,7 @@ const ComputersCanvas = () => {
 
     return (
         <Canvas
-            frameloop="demand"
+            frameloop="always"
             shadows
             dpr={[1, 2]}
             camera={{ position: [20, 3, 5], fov: 25 }}
