@@ -15,6 +15,8 @@ import {
     reactjs,
     tripguide,
     web,
+    gititdone,
+    bluetopaz,
 } from "../assets";
 
 export const navLinks = [
@@ -162,68 +164,74 @@ const experiences = [
 
 const projects = [
     {
-        name: "Trip Guide",
+        name: "Git it Done!",
         description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+            "Search for a GitHub user or click on a language to see a list of repositories and how many open issues they have!",
         tags: [
             {
-                name: "nextjs",
+                name: "API",
                 color: "blue-text-gradient",
             },
             {
-                name: "supabase",
+                name: "JavaScript",
                 color: "green-text-gradient",
             },
             {
                 name: "css",
                 color: "pink-text-gradient",
             },
+            {
+                name: "HTML",
+                color: "blue-text-gradient",
+            },
         ],
-        image: tripguide,
-        source_code_link: "https://github.com/",
+        image: gititdone,
+        source_code_link: "https://github.com/MichealJWEllis/mod6prodRedo",
+        live_site_link: "https://michealjwellis.github.io/mod6_redo/",
     },
     {
-        name: "Trip Guide",
+        name: "Blue Topaz",
         description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+            "A comprehensive e-commerce platform that allows users to shop hand made products.  Stripe integration for payment",
         tags: [
             {
                 name: "nextjs",
                 color: "blue-text-gradient",
             },
             {
-                name: "supabase",
+                name: "sanity",
                 color: "green-text-gradient",
             },
             {
-                name: "css",
+                name: "stripe",
                 color: "pink-text-gradient",
             },
         ],
-        image: tripguide,
-        source_code_link: "https://github.com/",
+        image: bluetopaz,
+        source_code_link: "https://github.com/MichealJWEllis/bluetopazshop",
+        live_site_link: "https://thebluetopazco.com",
     },
-    {
-        name: "Trip Guide",
-        description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-        tags: [
-            {
-                name: "nextjs",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "supabase",
-                color: "green-text-gradient",
-            },
-            {
-                name: "css",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: tripguide,
-        source_code_link: "https://github.com/",
-    },
+    // {
+    //     name: "Trip Guide",
+    //     description:
+    //         "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    //     tags: [
+    //         {
+    //             name: "nextjs",
+    //             color: "blue-text-gradient",
+    //         },
+    //         {
+    //             name: "supabase",
+    //             color: "green-text-gradient",
+    //         },
+    //         {
+    //             name: "css",
+    //             color: "pink-text-gradient",
+    //         },
+    //     ],
+    //     image: tripguide,
+    //     source_code_link: "https://github.com/",
+    // },
 ];
 
 export { experiences, projects, services, technologies };

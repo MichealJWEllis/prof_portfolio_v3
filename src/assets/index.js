@@ -31,6 +31,8 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import me from "./me.jpg";
+import gititdone from "./gititdone.png";
+import bluetopaz from "./blueT.png";
 
 export {
     me,
@@ -39,6 +41,8 @@ export {
     kwest,
     erie,
     alro,
+    gititdone,
+    bluetopaz,
     backend,
     creator,
     mobile,

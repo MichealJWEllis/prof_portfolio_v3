@@ -9,6 +9,9 @@ import { projects } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
+import { bluetopaz } from "../assets";
+import webIcon from "../assets/web.png";
+import Tooltip from "@mui/material/Tooltip";
 
 const ProjectCard = ({
     index,
@@ -17,6 +20,7 @@ const ProjectCard = ({
     tags,
     image,
     source_code_link,
+    live_site_link,
 }) => {
     return (
         <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -36,18 +40,49 @@ const ProjectCard = ({
                     />
 
                     <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-                        <div
-                            onClick={() =>
-                                window.open(source_code_link, "_blank")
-                            }
-                            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                        <Tooltip
+                            title="View Source Code on GitHub"
+                            arrow
+                            placement="top"
                         >
-                            <img
-                                src={github}
-                                alt="source code"
-                                className="w-1/2 h-1/2 object-contain"
-                            />
-                        </div>
+                            <div
+                                onClick={() =>
+                                    window.open(source_code_link, "_blank")
+                                }
+                                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                                style={{ marginRight: "5px" }}
+                            >
+                                <img
+                                    src={github}
+                                    alt="source code"
+                                    className="w-1/2 h-1/2 object-contain"
+                                />
+                            </div>
+                        </Tooltip>
+
+                        {live_site_link ? (
+                            <Tooltip
+                                title="View Live Site"
+                                arrow
+                                placement="top"
+                            >
+                                {" "}
+                                <div
+                                    onClick={() =>
+                                        window.open(live_site_link, "_blank")
+                                    }
+                                    className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                                >
+                                    <img
+                                        src={live_site_link ? webIcon : github}
+                                        alt="source code"
+                                        className="w-1/2 h-1/2 object-contain"
+                                    />
+                                </div>
+                            </Tooltip>
+                        ) : (
+                            <></>
+                        )}
                     </div>
                 </div>
 
@@ -120,6 +155,7 @@ ProjectCard.propTypes = {
     ).isRequired,
     image: PropTypes.string.isRequired,
     source_code_link: PropTypes.string.isRequired,
+    live_site_link: PropTypes.string.isRequired,
 };
 
 const WrapperWorks = SectionWrapper(Works, "projects");
