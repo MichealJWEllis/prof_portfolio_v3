@@ -52,7 +52,7 @@ ReactJS, JavaScript, HTML, Vite, Tailwindcss
 
 ## Screenshot
 
-![homepage](./src/assets/images/portfolio1.PNG)
+![Image](./src/assets/images/portfolio1.PNG)
 
 ---
 
