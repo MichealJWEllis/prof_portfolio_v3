@@ -52,7 +52,7 @@ ReactJS, JavaScript, HTML, Vite, Tailwindcss
 
 ## Screenshot
 
-![portfolio1](./src/assets/portfolio1.PNG)
+![portfolio1](https://github.com/MichealJWEllis/prof_portfolio_v3/assets/76069321/86860b36-fb72-44ce-893b-dad160901414)
 
 ---
 
