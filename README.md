@@ -6,23 +6,23 @@
 
 ## Table of Contents
 
-- [Description](#description)
+-   [Description](#description)
 
-- [Features](#features)
+-   [Features](#features)
 
-- [Code Used](#code_used)
+-   [Code Used](#code_used)
 
-- [Screenshot](#screenshot)
+-   [Screenshot](#screenshot)
 
-- [License](#license)
+-   [License](#license)
 
-- [Contributed](#contributed)
+-   [Contributed](#contributed)
 
-- [Tests](#tests)
+-   [Tests](#tests)
 
-- [Questions](#questions)
+-   [Questions](#questions)
 
-- [Run](#run)
+-   [Run](#run)
 
 ---
 
@@ -52,7 +52,7 @@ ReactJS, JavaScript, HTML, Vite, Tailwindcss
 
 ## Screenshot
 
-![homepage](./src/assets/images/portfolio1.png)
+![homepage](./src/assets/images/portfolio1.PNG)
 
 ---
 
@@ -80,8 +80,7 @@ If you have any questions on this repo, please contact mellis.thedev@gmail.com.
 
 ## GitHub
 
-- [GitHub Repository Link: newportfolio](https://github.com/MichealJWEllis/prof_portfolio_v3)
-
+-   [GitHub Repository Link: prof_portfolio_v3](https://github.com/MichealJWEllis/prof_portfolio_v3)
 
 ## CONTRIBUTION:
 
@@ -91,9 +90,9 @@ Made with ❤️ by Micheal Jw Ellis Sr
 
 No mentions provided
 
-## RUN: 
+## RUN:
 
-- git clone https://github.com/MichealJWEllis/prof_portfolio_v3.git
-- cd [project-directory]
-- npm install
-- npm run dev
+-   git clone https://github.com/MichealJWEllis/prof_portfolio_v3.git
+-   cd [project-directory]
+-   npm install
+-   npm run dev
