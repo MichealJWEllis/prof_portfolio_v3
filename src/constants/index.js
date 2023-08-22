@@ -213,9 +213,9 @@ const projects = [
         live_site_link: "https://thebluetopazco.com",
     },
     {
-        name: "Trip Guide",
+        name: "DALL-E Image Generator",
         description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+            "AI-Powered Imagery: Utilizes the DALLE API to convert textual descriptions into vivid and unique images, making content creation accessible and inspiring.",
         tags: [
             {
                 name: "OpenAi-API",
