@@ -4,7 +4,6 @@ const CanvasLoader = () => {
     const { progress } = useProgress();
     return (
         <Html
-            as="div"
             center
             style={{
                 display: "flex",

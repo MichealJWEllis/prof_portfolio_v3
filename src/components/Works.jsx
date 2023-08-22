@@ -49,14 +49,18 @@ const ProjectCard = ({
                                 onClick={() =>
                                     window.open(source_code_link, "_blank")
                                 }
-                                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-                                style={{ marginRight: "5px" }}
+                                className="cursor-pointer"
                             >
-                                <img
-                                    src={github}
-                                    alt="source code"
-                                    className="w-1/2 h-1/2 object-contain"
-                                />
+                                <div
+                                    className="black-gradient w-10 h-10 rounded-full flex justify-center items-center"
+                                    style={{ marginRight: "5px" }}
+                                >
+                                    <img
+                                        src={github}
+                                        alt="source code"
+                                        className="w-1/2 h-1/2 object-contain"
+                                    />
+                                </div>
                             </div>
                         </Tooltip>
 
@@ -66,18 +70,23 @@ const ProjectCard = ({
                                 arrow
                                 placement="top"
                             >
-                                {" "}
                                 <div
                                     onClick={() =>
                                         window.open(live_site_link, "_blank")
                                     }
-                                    className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                                    className="cursor-pointer"
                                 >
-                                    <img
-                                        src={live_site_link ? webIcon : github}
-                                        alt="source code"
-                                        className="w-1/2 h-1/2 object-contain"
-                                    />
+                                    <div className="black-gradient w-10 h-10 rounded-full flex justify-center items-center">
+                                        <img
+                                            src={
+                                                live_site_link
+                                                    ? webIcon
+                                                    : github
+                                            }
+                                            alt="source code"
+                                            className="w-1/2 h-1/2 object-contain"
+                                        />
+                                    </div>
                                 </div>
                             </Tooltip>
                         ) : (

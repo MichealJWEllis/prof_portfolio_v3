@@ -1,4 +1,5 @@
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
@@ -41,8 +42,8 @@ const Hero = () => {
                                 y: [0, 24, 0],
                             }}
                             transition={{
-                                duration: 1.0,
-                                repeat: Infinity,
+                                duration: 1.5,
+                                repeat: 99,
                                 repeatType: "loop",
                             }}
                             className="w-3 h-3 rounded-full bg-secondary mb-1"

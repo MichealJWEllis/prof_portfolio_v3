@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unknown-property */
+/* eslint-disable no-unused-vars */
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
@@ -16,6 +17,8 @@ const Computers = ({ isMobile }) => {
             meshRef.current.rotation.y += 0.004; // Adjust the value to control the speed
         }
     });
+
+    if (isMobile) return null;
     return (
         <mesh ref={meshRef}>
             <hemisphereLight intensity={1} groundColor="black" />
@@ -25,7 +28,7 @@ const Computers = ({ isMobile }) => {
                 penumbra={1}
                 intensity={2}
                 castShadow
-                shadow-mapSize={1024}
+                shadowMapSize={1024}
             />
             <pointLight intensity={10} />
             <primitive
@@ -64,7 +67,6 @@ const ComputersCanvas = () => {
 
     return (
         <Canvas
-            frameloop="always"
             shadows
             dpr={[1, 2]}
             camera={{ position: [20, 3, 5], fov: 25 }}
