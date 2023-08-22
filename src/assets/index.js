@@ -33,8 +33,10 @@ import tripguide from "./tripguide.png";
 import me from "./me.jpg";
 import gititdone from "./gititdone.png";
 import bluetopaz from "./blueT.png";
+import ai from "./ai.png";
 
 export {
+    ai,
     me,
     logo,
     logo2,
