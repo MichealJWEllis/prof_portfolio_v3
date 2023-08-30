@@ -18,6 +18,7 @@ import {
     gititdone,
     bluetopaz,
     ai,
+    thread,
 } from "../assets";
 
 export const navLinks = [
@@ -207,6 +208,14 @@ const projects = [
                 name: "stripe",
                 color: "pink-text-gradient",
             },
+            {
+                name: "JavaScript",
+                color: "green-text-gradient",
+            },
+            {
+                name: "css",
+                color: "pink-text-gradient",
+            },
         ],
         image: bluetopaz,
         source_code_link: "https://github.com/MichealJWEllis/bluetopazshop",
@@ -237,11 +246,45 @@ const projects = [
                 name: "Tailwind.css",
                 color: "green-text-gradient",
             },
+            {
+                name: "JavaScript",
+                color: "pink-text-gradient",
+            },
         ],
         image: ai,
         source_code_link:
             "https://github.com/MichealJWEllis/ai_image_generator",
         live_site_link: "https://aigenerator.michealjwellis.com/",
+    },
+    {
+        name: "Threads Clone",
+        description:
+            "Introducing Threads! This application serves as a hub for community-driven conversations, allowing users to create threads, comment on existing ones, build communities, and much more.",
+        tags: [
+            {
+                name: "NextJS",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "JavaScript",
+                color: "green-text-gradient",
+            },
+            {
+                name: "MERN",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "MongoDB",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Tailwind.css",
+                color: "green-text-gradient",
+            },
+        ],
+        image: thread,
+        source_code_link: "https://github.com/MichealJWEllis/threads",
+        live_site_link: "https://threads-rust-ten.vercel.app/sign-in",
     },
 ];
 

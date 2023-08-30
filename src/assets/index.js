@@ -34,8 +34,10 @@ import me from "./me.jpg";
 import gititdone from "./gititdone.png";
 import bluetopaz from "./blueT.png";
 import ai from "./ai.png";
+import thread from "./threads.png";
 
 export {
+    thread,
     ai,
     me,
     logo,
