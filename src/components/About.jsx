@@ -9,6 +9,8 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const ServiceCard = ({ index, title, icon }) => {
     return (
@@ -48,6 +50,27 @@ const About = () => {
             <motion.div variants={textVariant()}>
                 <p className={styles.sectionSubText}>Introduction</p>
                 <h2 className={styles.sectionHeadText}>About Me.</h2>
+                <a
+                    href="https://www.linkedin.com/in/michealjwellissr/"
+                    style={{ cursor: "pointer" }}
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <LinkedInIcon
+                        style={{
+                            marginRight: "10px",
+                            fontSize: "40px",
+                        }}
+                    />
+                </a>
+                <a
+                    href="https://github.com/MichealJWEllis"
+                    style={{ cursor: "pointer" }}
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <GitHubIcon style={{ fontSize: "40px" }} />
+                </a>
             </motion.div>
             <div className="flex flex-wrap md:flex-nowrap justify-between items-center">
                 <motion.p
