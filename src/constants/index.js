@@ -153,7 +153,7 @@ const experiences = [
         company_name: "Alro Steel Inc",
         icon: alro,
         iconBg: "#383E56",
-        date: "June 2, 2017 – August 14, 2020",
+        date: "June 2, 2013 – August 14, 2020",
         points: [
             "Career responsibilities included:",
             "CAD Operator - Utilized AutoCAD and other CAD software to create accurate 2D and 3D models, contributing to the successful completion of various engineering projects within deadlines.",
