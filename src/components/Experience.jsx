@@ -82,7 +82,7 @@ const Experience = () => {
                     ))}
                 </VerticalTimeline>
                 <a
-                    href="../assets/Micheal JW Ellis Sr_5-2-23_Resume.pdf"
+                    href="../assets/Micheal JW Ellis Sr_6-4-24_Resume.pdf"
                     download="Resume.pdf"
                     style={{ textDecoration: "none" }}
                 >
