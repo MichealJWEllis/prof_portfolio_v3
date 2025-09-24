@@ -10,6 +10,7 @@ import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 import Button from "@mui/material/Button";
+import resumePDF from "../assets/Micheal JW Ellis Sr_6-4-24_Resume.pdf"
 
 
 const ExperienceCard = ({ experience }) => {
@@ -84,6 +85,8 @@ const Experience = () => {
                 <a
                     href="../assets/Micheal JW Ellis Sr_6-4-24_Resume.pdf"
                     download="michealjwellis.pdf"
+                    target="_blank"
+                    rel="noreferrer"
                     style={{ textDecoration: "none" }}
                 >
                     <Button
