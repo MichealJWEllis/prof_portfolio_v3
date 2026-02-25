@@ -27,10 +27,6 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import alro from "./company/alro.png";
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
-import me from "./me.jpg";
 import gititdone from "./gititdone.png";
 import bluetopaz from "./blueT.png";
 import ai from "./ai.png";
@@ -47,7 +43,6 @@ export {
     helpdesk,
     thread,
     ai,
-    me,
     logo,
     logo2,
     kwest,
@@ -79,7 +74,4 @@ export {
     shopify,
     starbucks,
     tesla,
-    carrent,
-    jobit,
-    tripguide,
 };

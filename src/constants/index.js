@@ -13,7 +13,6 @@ import {
     mongodb,
     nodejs,
     reactjs,
-    tripguide,
     web,
     gititdone,
     bluetopaz,
