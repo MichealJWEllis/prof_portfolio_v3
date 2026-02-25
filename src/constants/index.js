@@ -19,6 +19,10 @@ import {
     bluetopaz,
     ai,
     thread,
+    swppp,
+    etm,
+    helpdesk,
+    generic
 } from "../assets";
 
 export const navLinks = [
@@ -41,24 +45,29 @@ export const navLinks = [
 ];
 
 const services = [
-    // {
-    //     title: "Me",
-    //     icon: me,
-    // },
     {
-        title: "Web Developer",
+        title: "Enterprise SSO & Identity",
+        description: "Entra ID + Auth0 | SAML | OIDC/OAuth2",
+        icon: creator,
+    },
+    {
+        title: "Full-Stack MERN",
+        description: "React + Node/Express + MongoDB/SQL",
         icon: web,
     },
     {
-        title: "Full Stack / Mobile Developer",
-        icon: mobile,
-    },
-    {
-        title: "Backend Developer",
+        title: "Authorization Design",
+        description: "RBAC, permissions, secure access controls",
         icon: backend,
     },
     {
-        title: "IT Analyst",
+        title: "Business Systems Engineering",
+        description: "Workflows, reporting, stakeholder alignment",
+        icon: mobile,
+    },
+    {
+        title: "Systems Integrations",
+        description: "SharePoint/MSAL, internal tooling, reliability",
         icon: creator,
     },
 ];
@@ -124,43 +133,58 @@ const experiences = [
         company_name: "Kwest Group LLC",
         icon: kwest,
         iconBg: "#383E56",
-        date: "May 22, 2022 – Present",
+        date: "May 2022 – Present",
         points: [
-            "Career responsibilities included:",
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-            "Developing via the Agile methodology.",
-            "Skills: React Native · React.js · css · Node.js · JavaScript · MongoDB · Mithri · HTML",
+            "Built and maintained MERN-stack internal tools supporting equipment inventory, employee requests, form workflows, and reporting.",
+            "Implemented and maintained enterprise authentication/authorization flows including SSO (SAML) with Entra ID/Auth0 and JWT-based session handling.",
+            "Developed Node/Express APIs with domain-based routing, middleware patterns, and consistent REST shapes for CRUD + archive/unarchive operations.",
+            "Enforced role/permission-based access controls (RBAC) and UI guards aligned with backend permission checks; partnered with stakeholders to map business processes to permissions.",
+            "Integrated SharePoint file storage using Azure MSAL; implemented file upload/download patterns and validated MIME/size constraints.",
+            "Added/maintained audit logging and change history snapshots to support traceability and compliance for data mutations.",
+            "Delivered multiple iterations of the application stack, including more complex versions using TypeScript and Mithril.",
+            "Integrated LLM capabilities into internal web applications to automate/summarize workflows and generate structured outputs; implemented prompt templates and response validation to ensure reliable results.",
+            "Built an LLM-powered assistant feature for internal users, including UI, API endpoints, and guardrails (input sanitization, restricted context, and logging) to support safe enterprise usage."
+
         ],
     },
     {
-        title: "Software Engineer",
+        title: "Software Engineer / Full Stack Developer",
         company_name: "Erie Construction",
         icon: erie,
         iconBg: "#E6DEDD",
-        date: "August 17, 2020 – May 20, 2022",
+        date: "August 2020 – May 2022",
         points: [
-            "Career responsibilities included:",
-            "Rebuilding and maintaining entire front-end experience with a mobile-first responsive design including back-end development for communication and functionality.",
-            "Expanding sales opportunities by building custom platforms and management of version control operations via GIT.",
-            "Skill: Bootstrap · HTML5 · css · C# · ASP.NET · MySQL · HTML",
+            "Rebuilt and maintained front-end experiences with responsive, mobile-first design and improved UX consistency.",
+            "Developed and integrated RESTful services and database-backed features; collaborated with non-technical stakeholders to translate requirements into deliverables.",
+            "Supported CI-friendly version control workflows and deployments; improved stability through bug fixes and incremental refactors.",
         ],
     },
     {
-        title: " CAD Operator / CAD Shift Supervisor / I.T - Helpdesk Analyst / Software Engineer",
-        company_name: "Alro Steel Inc",
+        title: "IT / Helpdesk Analyst · CAD Operator · Shift Supervisor",
+        company_name: "Alro Steel Inc.",
         icon: alro,
         iconBg: "#383E56",
-        date: "June 2, 2013 – August 14, 2020",
+        date: "June 2017 – August 2020",
         points: [
-            "Career responsibilities included:",
-            "CAD Operator - Utilized AutoCAD and other CAD software to create accurate 2D and 3D models, contributing to the successful completion of various engineering projects within deadlines.",
-            "Shift Supervisor - Managed a team of 3 third shift employees, utilized AutoCAD and other CAD software to create accurate 2D and 3D models, contributing to the successful completion of various engineering projects within deadlines.",
-            "I.T / Helpdesk Analyst - Provided timely and effective technical support to end-users, resolving hardware and software issues, and achieving a high customer satisfaction rate.",
-            "Software Engineer - Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+            "Provided tiered IT support for Windows environments, networking, and user access; resolved incidents and improved end-user productivity.",
+            "Supported CAD operations and supervised shift workflows; coordinated cross-team communication in a production environment.",
         ],
+    },
+];
+
+const education = [
+    {
+        degree: "B.S., Software Engineering",
+        school: "Western Governors University",
+    },
+    {
+        degree: "A.A.S., CAD Technology",
+        school: "Owens Community College",
+        note: "Certified CAD Technician",
+    },
+    {
+        degree: "Coding Boot Camp Certification",
+        school: "University of Texas at Austin",
     },
 ];
 
@@ -288,4 +312,81 @@ const projects = [
     },
 ];
 
-export { experiences, projects, services, technologies };
+const workProjects = [
+    {
+        name: "ETM — Employee & Equipment Tracking",
+        description:
+            "Internal MERN-stack platform for equipment inventory, employee requests, form workflows, and reporting. Enterprise SSO with Entra ID/Auth0, RBAC, SharePoint file storage via Azure MSAL, audit logging, and automated email/push notifications.",
+        tags: [
+            { name: "React", color: "blue-text-gradient" },
+            { name: "Node/Express", color: "green-text-gradient" },
+            { name: "MongoDB", color: "pink-text-gradient" },
+            { name: "Azure-MSAL", color: "blue-text-gradient" },
+            { name: "RBAC", color: "green-text-gradient" },
+        ],
+        image: etm,
+        source_code_link: null,
+        live_site_link: null,
+    },
+    {
+        name: "Plan — Resource Planning & Scheduling",
+        description:
+            "Enterprise resource planning tool for personnel and equipment allocation. Manages project bids, utilization forecasting, resource conflict detection, and automated reporting. Integrates with the HCSS external API and handles complex permission sets.",
+        tags: [
+            { name: "Node/Express", color: "blue-text-gradient" },
+            { name: "MongoDB", color: "green-text-gradient" },
+            { name: "HCSS-API", color: "pink-text-gradient" },
+            { name: "Webpack", color: "blue-text-gradient" },
+            { name: "Permissions", color: "green-text-gradient" },
+        ],
+        image: generic,
+        source_code_link: null,
+        live_site_link: null,
+    },
+    {
+        name: "Safety — SWPPP Inspection & Compliance",
+        description:
+            "TypeScript-first full-stack app for stormwater pollution prevention plan tracking, inspections, and corrective actions. Offline-first with IndexedDB (Dexie), PDF generation via Puppeteer, OAuth2 PKCE auth, and a client-facing portal.",
+        tags: [
+            { name: "React", color: "blue-text-gradient" },
+            { name: "TypeScript", color: "green-text-gradient" },
+            { name: "tRPC", color: "pink-text-gradient" },
+            { name: "OAuth2-PKCE", color: "blue-text-gradient" },
+            { name: "Puppeteer", color: "green-text-gradient" },
+        ],
+        image: swppp,
+        source_code_link: null,
+        live_site_link: null,
+    },
+    {
+        name: "Helpdesk — Internal Ticket Portal",
+        description:
+            "Internal helpdesk portal integrated with Zendesk for ticket submission. Supports multi-format file attachments up to 50MB, dynamic user and category sync from external APIs, and Multer file upload middleware.",
+        tags: [
+            { name: "Node/Express", color: "blue-text-gradient" },
+            { name: "Zendesk-API", color: "green-text-gradient" },
+            { name: "Multer", color: "pink-text-gradient" },
+            { name: "JavaScript", color: "blue-text-gradient" },
+        ],
+        image: helpdesk,
+        source_code_link: null,
+        live_site_link: null,
+    },
+    {
+        name: "CRM — Contact Relationship Manager",
+        description:
+            "Modern contact management system with a Vue 3 + TypeScript frontend, Pinia state management, and a clean Express/MongoDB backend. Progressive Web App with Playwright end-to-end testing and full CRUD operations.",
+        tags: [
+            { name: "Vue-3", color: "blue-text-gradient" },
+            { name: "TypeScript", color: "green-text-gradient" },
+            { name: "Pinia", color: "pink-text-gradient" },
+            { name: "MongoDB", color: "blue-text-gradient" },
+            { name: "PWA", color: "green-text-gradient" },
+        ],
+        image: generic,
+        source_code_link: null,
+        live_site_link: null,
+    },
+];
+
+export { education, experiences, projects, services, technologies, workProjects };

@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../styles";
-import { experiences } from "../constants";
+import { education, experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 import Button from "@mui/material/Button";
-import resumePDF from "../assets/Micheal JW Ellis Sr_6-4-24_Resume.pdf"
+import resumePDF from "../assets/Micheal_Ellis_Resume_2026.pdf"
 
 
 const ExperienceCard = ({ experience }) => {
@@ -83,8 +83,8 @@ const Experience = () => {
                     ))}
                 </VerticalTimeline>
                 <a
-                    href="../assets/Micheal JW Ellis Sr_6-4-24_Resume.pdf"
-                    download="michealjwellis.pdf"
+                    href={resumePDF}
+                    download="Micheal_Ellis_Resume_2026.pdf"
                     target="_blank"
                     rel="noreferrer"
                     style={{ textDecoration: "none" }}
@@ -100,6 +100,25 @@ const Experience = () => {
                         Download Resume
                     </Button>
                 </a>
+
+                <div className="mt-16">
+                    <p className={`${styles.sectionSubText} text-center`}>
+                        Education
+                    </p>
+                    <div className="mt-6 flex flex-col gap-4 items-center">
+                        {education.map((item, index) => (
+                            <div key={index} className="text-center">
+                                <p className="text-white text-[18px] font-bold">
+                                    {item.degree}
+                                </p>
+                                <p className="text-secondary text-[14px] mt-1">
+                                    {item.school}
+                                    {item.note ? ` — ${item.note}` : ""}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
         </>
     );

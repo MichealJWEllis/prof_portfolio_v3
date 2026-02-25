@@ -1,0 +1,11 @@
+Model Information:
+* title:	Laptop (Dell XPS)
+* source:	https://sketchfab.com/3d-models/laptop-dell-xps-8dfab66738b84ebd886da3de58fbef28
+* author:	LagzDesign (https://sketchfab.com/LagzDesign)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Laptop (Dell XPS)" (https://sketchfab.com/3d-models/laptop-dell-xps-8dfab66738b84ebd886da3de58fbef28) by LagzDesign (https://sketchfab.com/LagzDesign) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

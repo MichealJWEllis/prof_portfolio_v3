@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import React from "react";
 import { Tilt } from "react-tilt";
-import me from "../assets/Screenshot_20221217_032011.png";
+import me from "../assets/Gemini_Generated_Image_n66a5kn66a5kn66a.png";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
@@ -12,7 +12,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
-const ServiceCard = ({ index, title, icon }) => {
+const ServiceCard = ({ index, title, description }) => {
     return (
         <Tilt
             className="xs:w-[250px] w-full"
@@ -26,16 +26,16 @@ const ServiceCard = ({ index, title, icon }) => {
                 variants={fadeIn("right", "spring", index * 0.5, 0.75)}
                 className="w-full green-pink-gradient p-[1px] rounded-[50px] shadow-card"
             >
-                <div className=" rounded-[50px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
-                    <img
-                        src={icon}
-                        alt="web-development"
-                        className="w-16 h-16 object-contain"
-                    />
-
+                <div className="rounded-[50px] py-8 px-10 min-h-[180px] flex flex-col items-center justify-center gap-4">
                     <h3 className="text-white text-[20px] font-bold text-center">
                         {title}
                     </h3>
+                    <div className="w-10 h-[3px] rounded-full green-pink-gradient" />
+                    {description && (
+                        <p className="text-[grey] text-[13px] text-center">
+                            {description}
+                        </p>
+                    )}
                 </div>
             </motion.div>
         </Tilt>
@@ -45,8 +45,6 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
     return (
         <>
-            {/* Image container */}
-
             <motion.div variants={textVariant()}>
                 <p className={styles.sectionSubText}>Introduction</p>
                 <h2 className={styles.sectionHeadText}>About Me.</h2>
@@ -77,25 +75,28 @@ const About = () => {
                     variants={fadeIn("", "", 0.1, 1)}
                     className="mt-2 text-[grey] text-[21px] max-w-3xl leading-[30px]"
                 >
-                    Accomplished Full Stack Developer and IT Analyst with over
-                    10 years of experience in designing, developing, and
-                    implementing applications using cutting-edge technologies.
-                    Adept at creating mobile-first responsive designs, managing
-                    version control via GIT, and expanding business
-                    opportunities through custom platform development.
-                    Passionate about leveraging hands-on expertise to excel in a
-                    challenging Full-stack Developer / software engineering
-                    role.
+                    Full Stack Developer with 10+ years across web development and IT support. I build
+                    internal business applications with React, Node/Express, and MongoDB/SQL — with a
+                    focus on enterprise identity (Entra ID, Auth0, SAML, OIDC/OAuth2), authorization design
+                    (RBAC, permissions, UI guards), SharePoint/MSAL integrations, and business systems
+                    engineering. Strong stakeholder communication and systems thinking in
+                    manufacturing/operations environments.
                 </motion.p>
 
                 <img
                     src={me}
-                    alt="Your Name"
+                    alt="Micheal Ellis"
                     className="hidden md:block rounded-[60px] w-1/4 mx-auto"
                 />
             </div>
 
-            <div className="mt-20 flex flex-wrap gap-10">
+            <motion.p
+                variants={fadeIn("", "", 0.3, 1)}
+                className="mt-16 text-secondary text-[14px] uppercase tracking-widest"
+            >
+                Known for
+            </motion.p>
+            <div className="mt-4 flex flex-wrap gap-10">
                 {services.map((service, index) => (
                     <ServiceCard
                         key={service.title}
@@ -109,9 +110,9 @@ const About = () => {
 };
 
 ServiceCard.propTypes = {
-    index: PropTypes.number.isRequired, // if the index is a number
+    index: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
-    icon: PropTypes.any.isRequired, // Adjust based on the expected type of icon
+    description: PropTypes.string,
 };
 
 const WrappedAbout = SectionWrapper(About, "about");

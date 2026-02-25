@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { menu, close } from "../assets";
+import resumePDF from "../assets/Micheal_Ellis_Resume_2026.pdf";
 
 const Navbar = () => {
     const [active, setActive] = useState(" ");
@@ -50,26 +51,33 @@ const Navbar = () => {
                         style={{ borderRadius: "0px" }}
                     /> */}
                     <p className="text-white text-[18px] font-bold cursor-pointer flex">
-                        \ Micheal Jw Ellis &nbsp;
+                        \ <span className="text-[#4379ee]">Micheal</span> Jw Ellis &nbsp;
                         <span className="sm:block hidden">
                             \ Full Stack Developer
                         </span>
                     </p>
                 </Link>
-                <ul className="list-none hidden sm:flex flex-row gap-10">
+                <ul className="list-none hidden sm:flex flex-row gap-10 items-center">
                     {navLinks.map((link) => (
-                        // eslint-disable-next-line react/jsx-key
                         <li
                             key={link.id}
-                            className={`${active === link.title}
-                                    ? "text-white"
-                                    : "text-[grey]"
+                            className={`${
+                                active === link.title ? "text-white" : "text-[grey]"
                             } hover:text-white text-[18px] font-medium cursor-pointer`}
                             onClick={() => setActive(link.title)}
                         >
                             <a href={`#${link.id}`}>{link.title}</a>
                         </li>
                     ))}
+                    <li>
+                        <a
+                            href={resumePDF}
+                            download="Micheal_Ellis_Resume_2026.pdf"
+                            className="text-[grey] hover:text-white text-[18px] font-medium cursor-pointer border border-[grey] hover:border-white px-4 py-1 rounded-lg transition-colors"
+                        >
+                            Resume
+                        </a>
+                    </li>
                 </ul>
                 <div className="sm:hidden flex flex-1 justify-end items-center">
                     <img

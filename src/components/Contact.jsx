@@ -7,10 +7,6 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import swal from "sweetalert";
 
-// template_70o3ryd
-// service_brn5yzb
-// da41nFN87xAXI0GzU
-
 const Contact = () => {
     const formRef = useRef();
     const [form, setForm] = useState({
@@ -130,7 +126,8 @@ const Contact = () => {
 
                     <button
                         type="submit"
-                        className="bg-[#3C6CA4]  py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+                        disabled={loading || !form.name.trim() || !form.email.trim() || !form.message.trim()}
+                        className="bg-[#3C6CA4] py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                         {loading ? "Sending..." : "Send"}
                     </button>

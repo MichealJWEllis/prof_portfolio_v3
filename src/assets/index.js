@@ -35,8 +35,16 @@ import gititdone from "./gititdone.png";
 import bluetopaz from "./blueT.png";
 import ai from "./ai.png";
 import thread from "./threads.png";
+import swppp from './swppp.png';
+import etm from './etm.png';
+import helpdesk from './helpdesk.png'
+import generic from './generic.png'
 
 export {
+    generic,
+    swppp,
+    etm,
+    helpdesk,
     thread,
     ai,
     me,

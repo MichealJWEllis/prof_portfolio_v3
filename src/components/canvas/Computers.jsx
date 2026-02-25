@@ -1,42 +1,61 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
 import React, { Suspense, useEffect, useState } from "react";
+import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { Center, OrbitControls, Preload, useGLTF, useTexture } from "@react-three/drei";
 import PropTypes from "prop-types";
 import { useFrame } from "@react-three/fiber";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-    const computer = useGLTF("./desktop_pc/scene.gltf");
+    const computer = useGLTF("./laptop/scene.gltf");
+    const screenTexture = useTexture("./desktop_pc/textures/Material.002_baseColor.png");
     const meshRef = React.useRef();
 
+    useEffect(() => {
+        computer.scene.traverse((child) => {
+            if (child.isMesh) {
+                if (child.name === "Object_12") {
+                   
+                    child.material.color.set("#ffffff");
+                    child.material.needsUpdate = true;
+                }
+                if (child.name === "Object_6") {
+                    child.material.emissive = new THREE.Color("grey");
+                    child.material.emissiveIntensity = 0.1;
+                    child.material.needsUpdate = true;
+                }
+            }
+        });
+    }, [computer.scene, screenTexture]);
+
     useFrame(() => {
-        // Update the rotation for each frame
         if (meshRef.current) {
-            meshRef.current.rotation.y += 0.004; // Adjust the value to control the speed
+            meshRef.current.rotation.y += 0.004;
         }
     });
 
     if (isMobile) return null;
     return (
-        <mesh ref={meshRef}>
+        <mesh ref={meshRef} position={[0, -0.5, 0]}>
             <hemisphereLight intensity={1} groundColor="black" />
             <spotLight
                 position={[-20, 50, 10]}
-                angle={0.12}
+                angle={1.50}
                 penumbra={1}
                 intensity={2}
                 castShadow
                 shadowMapSize={1024}
             />
             <pointLight intensity={10} />
-            <primitive
-                object={computer.scene}
-                scale={isMobile ? 0.5 : 0.8}
-                position={isMobile ? [0, -3, -0.75] : [0, -3.25, -1.5]}
-                rotation={[-0.01, -0.2, -0.1]}
-            />
+            <Center>
+                <primitive
+                    object={computer.scene}
+                    scale={1}
+                    rotation={[0.2, 0, 0]}
+                />
+            </Center>
         </mesh>
     );
 };
@@ -45,21 +64,14 @@ const ComputersCanvas = () => {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        // Add a listener for changes to the screen size
         const mediaQuery = window.matchMedia("(max-width: 600px)");
-
-        // Set the initial value of the `isMobile` state variable
         setIsMobile(mediaQuery.matches);
 
-        // Define a callback function to handle changes to the media query
         const handleMediaQueryChange = (event) => {
             setIsMobile(event.matches);
         };
 
-        // Add the callback function as a listener for changes to the media query
         mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-        // Remove the listener when the component is unmounted
         return () => {
             mediaQuery.removeEventListener("change", handleMediaQueryChange);
         };
@@ -85,6 +97,7 @@ const ComputersCanvas = () => {
         </Canvas>
     );
 };
+
 Computers.propTypes = {
     isMobile: PropTypes.bool.isRequired,
 };
