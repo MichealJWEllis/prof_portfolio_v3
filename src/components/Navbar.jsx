@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { menu, close } from "../assets";
-import resumePDF from "../assets/Micheal_Ellis_Resume_2026.pdf";
+
 
 const Navbar = () => {
     const [active, setActive] = useState(" ");
@@ -71,7 +71,7 @@ const Navbar = () => {
                     ))}
                     <li>
                         <a
-                            href={resumePDF}
+                            href="/Micheal_Ellis_Resume_2026.pdf"
                             download="Micheal_Ellis_Resume_2026.pdf"
                             className="text-[grey] hover:text-white text-[18px] font-medium cursor-pointer border border-[grey] hover:border-white px-4 py-1 rounded-lg transition-colors"
                         >

@@ -10,7 +10,6 @@ import { education, experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 import Button from "@mui/material/Button";
-import resumePDF from "../assets/Micheal_Ellis_Resume_2026.pdf"
 
 
 const ExperienceCard = ({ experience }) => {
@@ -83,7 +82,7 @@ const Experience = () => {
                     ))}
                 </VerticalTimeline>
                 <a
-                    href={resumePDF}
+                    href="/Micheal_Ellis_Resume_2026.pdf"
                     download="Micheal_Ellis_Resume_2026.pdf"
                     target="_blank"
                     rel="noreferrer"
